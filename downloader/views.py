@@ -19,7 +19,7 @@ import subprocess
 
 # def stream_video(request):
 #     def file_iterator():
-#         CHUNK_SIZE = 8192
+#         CHUNK_SIZE = 1024
 #         while True:
 #             chunk = process.stdout.read(CHUNK_SIZE)
 #             if not chunk:
