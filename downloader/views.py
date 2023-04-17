@@ -43,7 +43,7 @@ class stream_url(View):
             url = form.cleaned_data['link']
             process = subprocess.Popen(["yt-dlp", "-o", "-", url], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
             def file_iterator():
-                CHUNK_SIZE = 8192
+                CHUNK_SIZE = 1024
                 while True:
                     chunk = process.stdout.read(CHUNK_SIZE)
                     if not chunk:
